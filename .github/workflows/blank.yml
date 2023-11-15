@@ -22,11 +22,4 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Start Node.js and npm
-        uses: actions/setup-node@v4.0.0
-      - name: Install deps
-        run: "npm i"
-      - name: Bulid
-        run: "npm run bulid"
+      - uses: skywarth/vite-github-pages-deployer@v1.2.0
