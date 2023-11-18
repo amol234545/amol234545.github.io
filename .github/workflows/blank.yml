@@ -28,4 +28,14 @@ jobs:
         uses: actions/setup-node@v4.0.0
       - run: "npm i"
 
-      - uses: skywarth/vite-github-pages-deployer@v1.2.0
+      - run: "npm run bulid"
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v2.0.0
+        with:
+          name: "site"
+          path: "dist/"
+      - name: Deploy GitHub Pages site
+        uses: actions/deploy-pages@v1.2.9
+        with:
+          artifact_name: "site"
