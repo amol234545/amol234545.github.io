@@ -39,3 +39,7 @@ jobs:
         uses: actions/deploy-pages@v1.2.9
         with:
           artifact_name: "site"
+      - name: Cache
+        uses: actions/cache@v3.3.2
+        with:
+         path: "node_modules/*"
