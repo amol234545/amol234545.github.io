@@ -40,7 +40,6 @@ jobs:
       - name: Build and deploy
         run: |
          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/github.com/amol234545/amol234545.github.io.git
-         npm run bulid
-         npx gh-pages -d build -u "github-actions-bot <support+actions@github.com>"
+         npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
