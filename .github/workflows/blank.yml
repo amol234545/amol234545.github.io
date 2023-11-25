@@ -38,7 +38,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build and deploy
-        run: npm run deploy
         run: |
          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/github.com/amol234545/amol234545.github.io.git
          npm run bulid
