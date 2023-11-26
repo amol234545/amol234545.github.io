@@ -2,8 +2,8 @@
  * @title Hello
  */
 import React from "react";
-export default class Application extends React.Component {
-  render () {
+
+export default function index() {
    return (
      <>
      <html>
