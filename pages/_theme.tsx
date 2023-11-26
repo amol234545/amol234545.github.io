@@ -6,8 +6,7 @@ const theme: Theme = ({ loadedData, loadState }) => {
   const staticData = useStaticData()
   console.log('#Theme', staticData, loadedData, loadState)
 
-  // You can generate side nav menu from staticData
-  // const sideMenuData = useMemo(() => generateSideMenu(staticData), [staticData])
+ const sideMenuData = useMemo(() => generateSideMenu(staticData), [staticData])
 
   if (loadState.type === '404') return <p>Page not found.</p>
   if (loadState.type === 'load-error') return <p>Load error!</p>
