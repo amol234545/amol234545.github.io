@@ -1,1 +1,0 @@
-import{j as e}from"./ssg-client-d4c2c4b0.js";function t(){return e.jsx(e.Fragment,{children:e.jsxs("html",{children:[e.jsx("head",{children:e.jsx("title",{children:"Hello"})}),e.jsx("body",{children:e.jsx("div",{})})]})})}const l=Object.freeze(Object.defineProperty({__proto__:null,default:t},Symbol.toStringTag,{value:"Module"})),n={};n.main=l;export{n as default};
