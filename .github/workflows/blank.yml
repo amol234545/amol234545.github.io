@@ -40,7 +40,7 @@ jobs:
       - name: Build and deploy
         run: |
          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-         npx rimraf dist && vite build --outDir dist && serve -s dist
+         npm run ssr-for-deploy
          gh-pages -d dist -t -u "github-actions-bot <support+actions@github.com>"
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
