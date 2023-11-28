@@ -1,35 +1,30 @@
 /**
  * @title Hello
  */
+import '../assets/style.scss';
 import React from "react";
 import {useState} from "react";
-import { Button,Card } from 'react-bootstrap';
+import { Button,Card,Container } from 'react-bootstrap';
 
 export default function index() {
    const [count,setCount] = useState(0)
    return (
      <>
      <html>
-        <head>
-            <title>Hello</title>
-        </head>
-        <body>
-            <div>
-                <Card>
-                  <Card.Header>
-                    Hello
-                  </Card.Header>
-                  <Card.Body>
-                  <Card.Title>
-                    Button Counter
-                  </Card.Title>
-                  <Card.Text>
-                    Count:${count}
-                  </Card.Text>
-                  </Card.Body>
-                </Card>
-                <Button variant="dark" onClick={() => {setCount(count + 1)}}>Click</Button>
-            </div>
+      <body>
+      <Container fluid>
+         <Card style={{ width: '18rem' }} bg="dark" text="white">
+           <Card.Body>
+           <Card.Title>
+             Button Counter
+           </Card.Title>
+           <Card.Text>
+             Count:{count}
+           </Card.Text>
+           <Button variant="light" onClick={() => {setCount(count + 1)}}>Click</Button>
+           </Card.Body>
+         </Card>
+      </Container>
         </body>
      </html>
      </>
