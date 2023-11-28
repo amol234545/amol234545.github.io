@@ -39,8 +39,9 @@ jobs:
         run: npm install
       - name: Build and deploy
         run: |
-         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
          npm run ssr-for-deploy
-         npx gh-pages -d dist -t -u "github-actions-bot <support+actions@github.com>"
-        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      -   uses: actions/configure-pages@v3.0.0
+      -  uses: actions/upload-pages-artifact@v2.0.0
+         with:
+           path: "dist/"
+      -  uses: actions/deploy-pages@v2
