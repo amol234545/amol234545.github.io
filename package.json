@@ -24,7 +24,7 @@
     "react-router-dom": "^6.13.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.13",
+    "@types/react": "^18.2.42",
     "@vitejs/plugin-react": "^4.0.1",
     "cross-env": "^7.0.3",
     "gh-pages": "^5.0.0",
